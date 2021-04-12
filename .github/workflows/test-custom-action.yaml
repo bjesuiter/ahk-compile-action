@@ -10,9 +10,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Compile AHK Script
         uses: bjesuiter/ahk-compile-action@main
-        id: ahk-compile
+        id: ahk_compile
         with:
           in_script: ${{github.workspace}}\example.ahk
           out_exe: ${{github.workspace}}\example.exe
       - name: Run the newly compiled exe
-        run: ${{github.workspace}}\example.exe
+        run: ${{steps.ahk_compile.outputs.out_exe}}
