@@ -47,4 +47,4 @@ outputs:
     description: The path to the output exe. If 'out_exe' is given as input, it will be the same here.
 runs: 
   using: node12
-  main: compile-ahk.js
+  main: dist/compile-ahk.js

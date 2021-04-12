@@ -2,7 +2,7 @@
   "name": "ahk-compile-action",
   "version": "0.0.1",
   "description": "Github Action to Compile AutoHotkey Scripts",
-  "main": "compile-ahk.js",
+  "main": "dist/compile-ahk.js",
   "scripts": {
     "build": "esbuild src/compile-ahk.js --bundle --outfile=dist/compile-ahk.js --platform=node --target=node12"
   },
