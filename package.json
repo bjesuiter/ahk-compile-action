@@ -4,7 +4,8 @@
   "description": "Github Action to Compile AutoHotkey Scripts",
   "main": "dist/compile-ahk.js",
   "scripts": {
-    "build": "esbuild src/compile-ahk.js --bundle --outfile=dist/compile-ahk.js --platform=node --target=node12"
+    "build": "esbuild src/compile-ahk.js --bundle --outfile=dist/compile-ahk.js --platform=node --target=node12",
+    "start": "node ./dist/compile-ahk.js"
   },
   "repository": {
     "type": "git",
