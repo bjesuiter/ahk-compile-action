@@ -46,8 +46,5 @@ outputs:
   out_exe: 
     description: The path to the output exe. If 'out_exe' is given as input, it will be the same here.
 runs: 
-  using: "node12"
-  steps:
-    # - run: ${{github.actions_path}}\compile.cmd
-    - run: compile.cmd
-      shell: cmd
+  using: node12
+  main: compile-ahk.js
