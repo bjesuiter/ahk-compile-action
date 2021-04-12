@@ -1,0 +1,28 @@
+# Github Action YAML Definition Docs: https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+
+
+name: ahk-compile
+description: Compiles an AutoHotkey Script with Ahk2Exe (MUST RUN on windows-latest or windows 2019!)
+inputs: 
+  # Ahk2Exe Options Docs: https://www.autohotkey.com/docs/Scripts.htm#ahk2exe
+  in_script: 
+    description: The path and name of the script to compile.
+    required: true
+  out_exe: 
+    description: The path\name of the output .exe to be created. Default is the directory\base_name of the input file plus extension of .exe.
+    required: false
+  icon: 
+    description: The icon file to be used. (Default is the last icon used in the GUI interface, but this will be the default icon used in the GUI forever)
+    required: false
+  bin: 
+    description: The .bin file to be used. (Default is the last .bin file name used in the GUI interface, but this will be the default .bin file used in the GUI forever)
+    required: false
+  codepage: 
+    description: [v1.1.23.01+]: Overrides the default codepage used to read script files. For a list of possible values, see Code Page Identifiers. Note that Unicode scripts should begin with a byte-order-mark (BOM), rendering the use of this parameter unnecessary.
+    required: false
+  compress: 
+    description: [v1.1.33+]: Compress the exe? 0 = no, 1 = use MPRESS if present, 2 = use UPX if present. Default is 0 = no compression.
+    required: false
+    default: 0
+  ahk_exe: 
+    description: [v1.1.33+]: The path\name of AutoHotkey.exe to be used when compiling the script. Uses the bundled AutoHotkey.exe from this extension per default
