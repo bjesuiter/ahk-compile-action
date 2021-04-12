@@ -6,6 +6,8 @@ jobs:
     runs-on: windows-2019
     name: Test our custom action
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
       - name: Compile AHK Script
         uses: bjesuiter/ahk-compile-action@main
         id: ahk-compile
