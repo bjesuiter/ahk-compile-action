@@ -46,7 +46,7 @@ outputs:
   out_exe: 
     description: The path to the output exe. If 'out_exe' is given as input, it will be the same here.
 runs: 
-  using: "composite"
+  using: "node12"
   steps:
     # - run: ${{github.actions_path}}\compile.cmd
     - run: compile.cmd
