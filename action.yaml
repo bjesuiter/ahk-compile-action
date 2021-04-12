@@ -48,4 +48,4 @@ outputs:
 runs: 
   steps:
     - run: ${{github.actions_path}}\compile.cmd
-      # shell: cmd
+      shell: cmd
