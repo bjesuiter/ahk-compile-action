@@ -4,10 +4,10 @@ on: [push]
 jobs:
   custom_test:
     runs-on: windows-2019
-    name: Test our custom action (unfortunately not with act, since act is based on docker and ubuntu images)
+    name: Test our custom action
     steps:
       - name: Compile AHK Script
-        uses: bjesuiter/ahk-compile-action@master
+        uses: bjesuiter/ahk-compile-action@main
         id: ahk-compile
         with:
           in_script: example.ahk
