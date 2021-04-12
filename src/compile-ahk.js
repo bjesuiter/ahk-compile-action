@@ -9,7 +9,12 @@ const path = require('path');
 
  async function run() {
     try {
+        // input values
         const inScript = core.getInput('in_script', { required: true });
+
+        // calculated values
+        const cwd = path.dirname(inScript);
+        const inFilename = path.basename(inScript).split('.')[0];
         const githubActionPath = path.join(__dirname, '..');
 
         const compileParams = ['/in', inScript];
@@ -30,7 +35,8 @@ const path = require('path');
           core.setFailed(stderr);
         }
 
-        core.setOutput('out_exe', `${path.basename(inScript)}.exe`)
+        const outExe = path.join(cwd, `${inFilename}.exe` );
+        core.setOutput('out_exe', outExe)
     } catch (error) {
       core.setFailed(error.message);
     }

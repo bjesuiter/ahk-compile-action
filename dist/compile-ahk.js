@@ -1232,6 +1232,8 @@ var path = require("path");
 async function run() {
   try {
     const inScript = core.getInput("in_script", {required: true});
+    const cwd = path.dirname(inScript);
+    const inFilename = path.basename(inScript).split(".")[0];
     const githubActionPath = path.join(__dirname, "..");
     const compileParams = ["/in", inScript];
     let stdout = "";
@@ -1247,7 +1249,8 @@ async function run() {
     if (stderr.length > 0) {
       core.setFailed(stderr);
     }
-    core.setOutput("out_exe", `${path.basename(inScript)}.exe`);
+    const outExe = path.join(cwd, `${inFilename}.exe`);
+    core.setOutput("out_exe", outExe);
   } catch (error) {
     core.setFailed(error.message);
   }
