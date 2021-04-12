@@ -1,0 +1,1 @@
+MsgBox, Example AHK Script Compiled successfully!
