@@ -1,1 +1,1 @@
-Echo, Example AHK Script Compiled successfully!
+Print("Example AHK Script Compiled successfully!")
