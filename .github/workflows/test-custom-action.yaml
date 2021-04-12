@@ -13,6 +13,6 @@ jobs:
         id: ahk_compile
         with:
           in_script: ${{github.workspace}}\example\example.ahk
-        timeout-minutes: 5
+        timeout-minutes: 2
       - name: Run the newly compiled exe
         run: ${{steps.ahk_compile.outputs.out_exe}}
