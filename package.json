@@ -23,6 +23,7 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "esbuild": "^0.9.7"
+    "esbuild": "^0.9.7",
+    "prettier": "^2.2.1"
   }
 }
