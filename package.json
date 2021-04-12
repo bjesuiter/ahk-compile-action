@@ -1,0 +1,22 @@
+{
+  "name": "ahk-compile-action",
+  "version": "0.0.1",
+  "description": "Github Action to Compile AutoHotkey Scripts",
+  "main": "compile-ahk.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjesuiter/ahk-compile-action.git"
+  },
+  "author": "Benjamin Jesuiter <bjesuiter@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjesuiter/ahk-compile-action/issues"
+  },
+  "homepage": "https://github.com/bjesuiter/ahk-compile-action#readme",
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
