@@ -1,1 +1,1 @@
-MsgBox, Example AHK Script Compiled successfully!
+Echo, Example AHK Script Compiled successfully!
