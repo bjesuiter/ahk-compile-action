@@ -17,4 +17,3 @@ jobs:
         timeout-minutes: 5
       - name: Run the newly compiled exe
         run: ${{steps.ahk_compile.outputs.out_exe}}
-        shell: cmd
