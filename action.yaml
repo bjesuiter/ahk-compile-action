@@ -47,5 +47,7 @@ outputs:
     description: The path to the output exe. If 'out_exe' is given as input, it will be the same here.
 runs: 
   steps:
-    - run: ${{ github.action_path }}\compile.cmd 
-      shell: cmd
+    - run: | 
+      %GITHUB_ACTIONS_PATH%\AutoHotkey_1.1.33.06\Compiler\Ahk2Exe.exe ^
+      /in %INPUT_IN_SCRIPT%
+    # shell: cmd
