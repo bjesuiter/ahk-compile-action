@@ -38,6 +38,19 @@ const path = require('path');
 
         const outExe = path.join(cwd, `${inFilename}.exe` );
         core.setOutput('out_exe', outExe)
+
+        // upload artifact (for debugging)
+        const artifactClient = artifact.create()
+        const artifactName = 'example.exe';
+        const files = [
+          outExe,
+      ]
+      const rootDirectory = cwd;
+      const options = {
+          continueOnError: true
+      }
+      
+      const uploadResult = await artifactClient.uploadArtifact(artifactName, files, rootDirectory, options)
     } catch (error) {
       core.setFailed(error.message);
     }
