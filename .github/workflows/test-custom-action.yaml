@@ -12,7 +12,7 @@ jobs:
         uses: bjesuiter/ahk-compile-action@main
         id: ahk-compile
         with:
-          in_script: example.ahk
-          out_exe: example.exe
+          in_script: ${{github.workspace}}\example.ahk
+          out_exe: ${{github.workspace}}\example.exe
       - name: Run the newly compiled exe
-        run: example.exe
+        run: ${{github.workspace}}\example.exe
