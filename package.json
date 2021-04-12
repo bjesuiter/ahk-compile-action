@@ -4,7 +4,7 @@
   "description": "Github Action to Compile AutoHotkey Scripts",
   "main": "compile-ahk.js",
   "scripts": {
-    "test": " "
+    "build": "esbuild compile-ahk.js --bundle --outfile=dist/compile-ahk.js --platform=node --target=node12"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,6 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "snowpack": "^3.2.2"
+    "esbuild": "^0.9.7"
   }
 }
