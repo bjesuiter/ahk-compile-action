@@ -48,5 +48,6 @@ outputs:
 runs: 
   using: "composite"
   steps:
-    - run: ${{github.actions_path}}\compile.cmd
+    # - run: ${{github.actions_path}}\compile.cmd
+    - run: compile.cmd
       shell: cmd
