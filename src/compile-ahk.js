@@ -14,7 +14,14 @@ const path = require('path');
 
         const compileParams = ['/in', inScript];
 
-        await exec.exec(path.join(githubActionPath, 'AutoHotkey_1.1.33.06', 'Compiler', 'Ahk2Exe.exe' ), compileParams);
+        await exec.exec(path.join(githubActionPath, 'AutoHotkey_1.1.33.06', 'Compiler', 'Ahk2Exe.exe' ), compileParams, {
+          stdout: (data) => {
+            process.stdout.write(data.toString());
+          },
+          stderr: (data) => {
+            process.stderr.write(data.toString());
+          },
+        });
 
         core.setOutput('out_exe', `${path.basename(inScript)}.exe`)
     } catch (error) {
