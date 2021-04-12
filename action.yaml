@@ -2,7 +2,7 @@
 
 
 name: ahk-compile
-description: Compiles an AutoHotkey Script with Ahk2Exe (MUST RUN on windows-latest or windows 2019!)
+description: Compiles an AutoHotkey Script with Ahk2Exe (MUST RUN on windows-latest or windows 2019!) Does use AHK 1.1 for now. (Support for other versions planned )
 inputs: 
   # Ahk2Exe Options Docs: https://www.autohotkey.com/docs/Scripts.htm#ahk2exe
   in_script: 
