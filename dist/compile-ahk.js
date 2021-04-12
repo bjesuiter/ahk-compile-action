@@ -1232,7 +1232,7 @@ var path = require("path");
 async function run() {
   try {
     const inScript = core.getInput("in_script", {required: true});
-    const githubActionPath = __dirname;
+    const githubActionPath = path.join(__dirname, "..");
     const compileParams = ["/in", inScript];
     await exec.exec(path.join(githubActionPath, "AutoHotkey_1.1.33.06", "Compiler", "Ahk2Exe.exe"), compileParams);
     core.setOutput("out_exe", `${path.basename(inScript)}.exe`);

@@ -10,7 +10,7 @@ const path = require('path');
  async function run() {
     try {
         const inScript = core.getInput('in_script', { required: true });
-        const githubActionPath = __dirname;
+        const githubActionPath = path.join(__dirname, '..');
 
         const compileParams = ['/in', inScript];
 
