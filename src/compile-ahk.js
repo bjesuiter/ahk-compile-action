@@ -36,6 +36,10 @@ const path = require('path');
           core.setFailed(stderr);
         }
 
+        if (stdout.length > 0) {
+          core.setOutput(stdout);
+        }
+
         const outExe = path.join(cwd, `${inFilename}.exe` );
         core.setOutput('out_exe', outExe)
 
